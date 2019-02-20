@@ -371,7 +371,9 @@ function User_Login()
 		//alert(Id + Pwd);
 		if(Id == "abc@test.com" && Pwd == "admin")
 		{
-			window.location.href = "file:///D:/Other%20Project//olympus%20-%20Copy//olympus-html//src//02-ProfilePage.html"
+			var loc = window.location.pathname;
+			var dir = loc.substring(0, loc.lastIndexOf('/'));
+			window.location = dir + "//02-ProfilePage.html"
 		document.getElementById("txtEmailID").value = "";
 		document.getElementById("txtPwd").value = "";
 		}
